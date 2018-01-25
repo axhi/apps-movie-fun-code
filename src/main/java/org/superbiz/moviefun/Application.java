@@ -16,4 +16,9 @@ public class Application {
     public ServletRegistrationBean actionServletRegistration(ActionServlet actionServlet) {
         return new ServletRegistrationBean(actionServlet, "/moviefun/*");
     }
+
+    @Bean
+    public CsvUtils csvUtils() {
+        return new CsvUtils();
+    }
 }
