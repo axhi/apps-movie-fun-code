@@ -1,4 +1,4 @@
-package org.superbiz.moviefun.blob;
+package org.superbiz.moviefun.blobstore;
 
 import java.io.IOException;
 import java.util.Optional;
