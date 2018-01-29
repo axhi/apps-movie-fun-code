@@ -2,6 +2,8 @@ package org.superbiz.moviefun;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.superbiz.moviefun.movies.Movie;
+import org.superbiz.moviefun.movies.MoviesBean;
 
 import java.util.Map;
 
