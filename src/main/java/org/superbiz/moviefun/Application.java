@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.superbiz.moviefun.blob.BlobStore;
+import org.superbiz.moviefun.blob.S3Store;
 
 @SpringBootApplication
 public class Application {

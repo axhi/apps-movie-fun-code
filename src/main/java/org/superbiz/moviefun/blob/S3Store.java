@@ -1,13 +1,10 @@
-package org.superbiz.moviefun;
+package org.superbiz.moviefun.blob;
 
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.amazonaws.services.s3.model.S3Object;
 import org.springframework.http.MediaType;
-import org.superbiz.moviefun.blob.Blob;
-import org.superbiz.moviefun.blob.BlobStore;
 
-import java.io.IOException;
 import java.util.Optional;
 
 public class S3Store implements BlobStore {
@@ -20,13 +17,13 @@ public class S3Store implements BlobStore {
     }
 
     @Override
-    public void put(Blob blob) throws IOException {
+    public void put(Blob blob) {
         ObjectMetadata metadata = new ObjectMetadata();
         s3Client.putObject(s3BucketName, blob.getName(), blob.getInputStream(), metadata);
     }
 
     @Override
-    public Optional<Blob> get(String name) throws IOException {
+    public Optional<Blob> get(String name) {
         S3Object object = s3Client.getObject(s3BucketName, name);
         Optional<Blob> optionalBlob;
 
